@@ -27,9 +27,9 @@ app.use(cors())
 app.set('views', path.join(__dirname, 'views'))
 
 app.use('/home', require('./routes/homepage'))
-app.use('*', (req, res) => {
-  res.render('webpages/404')
-})
+// app.use('*', (req, res) => {
+//   res.render('webpages/404')
+// })
 
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
