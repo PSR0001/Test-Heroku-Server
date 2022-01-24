@@ -1,7 +1,7 @@
-const URL = "https://test-code-0001.herokuapp.com/";
+// const URL = "https://test-code-0001.herokuapp.com/";
 
 // Socket.io Code-->
-const socket = io(URL);
+// const socket = io(URL);
 
 // client-side
  socket.on("connection", (data) => {
