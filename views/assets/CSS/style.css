@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&family=Ubuntu+Mono:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&family=Roboto+Slab:wght@400;600&family=Ubuntu+Mono:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --nav-color: #3c048a;
+  --left-color: #b5c5d6;
+  --body-color: #d8e0e8;
+  --middle-color: linear-gradient(-45deg, #f2f1fa, #d8e0e8);
+  --middle-shadow-top: #bbb;
+  --middle-shadow-bottom: #ffffff;
+  --iotName-color: white;
+}
+
+/* light Mode */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-1 {
+  width: 8%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--left-color);
+  justify-content: center;
+  align-items: center;
+}
+.upper {
+  height: 8%;
+}
+.round {
+  height: 36%;
+  /* width: 100%; */
+}
+.round_plus {
+  color: white;
+  height: 70px;
+  width: 70px;
+  border: 3px solid rgba(0, 0, 0, 0.137);
+  border-radius: 50%;
+  background-color: #03dac5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  height: 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imageOne {
+  height: 2.7rem;
+  width: 2.7rem;
+}
+.imageTwo {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.container-2 {
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+}
+.container-2-child-1 {
+  height: 8%;
+  background: var(--nav-color);
+  color: white;
+  display: flex;
+  box-shadow: 0px 80px 4px #989898;
+}
+.container-2-child-1 h1 {
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Bitter", serif;
+}
+.Drak-Light {
+  width: 30%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 5px;
+}
+.button {
+  border: 1px solid #110129;
+  height: 40px;
+  width: 40px;
+  border-radius: 25%;
+  background-image: linear-gradient(-45deg, #7217f1, #200c96);
+  margin-left: 15px;
+  margin-right: 10px;
+  box-shadow: -2px -2px 3px #4e4e92, 1px 1px 0px #000000;
+}
+
+.container-2-child-2 {
+  height: 92%;
+  background-color: var(--body-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.iotName {
+  height: 10%;
+}
+.iotName h1 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: var(--iotName-color);
+  font-size: 4rem;
+  text-shadow: 3px 3px 3px #00000040;
+  font-family: "Roboto Slab", serif;
+}
+
+
+
+.chart {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 80%;
+  width: 70%;
+  background-image: var(--midddle-color);
+  box-shadow: 8px 8px 4px var(--middle-shadow-top),
+    -8px -8px 12px var(--middle-shadow-bottom);
+  border-radius: 1%;
+}
+#chart {
+  height: 85%;
+  width: 100%;
+  color: white;
+}
+
+/* dark mode */
+
+.dark-mode {
+  --nav-color: #151515;
+  --left-color: #1f1f1f;
+  --body-color: #2c2c2c;
+  --iotName-color: black;
+
+  --middle-shadow-top: #333;
+  --middle-shadow-bottom: #212121;
+}
+
+/* ---- for responsive webpage */
+@media only screen and (max-width: 1000px) {
+  .round_plus {
+    height: 50px;
+    width: 50px;
+  }
+  .chart{
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .round_plus {
+    height: 35px;
+    width: 35px;
+    background-color: #03dac5;
+  }
+  .container-2-child-1 h1 {
+    font-size: 1.5rem;
+  }
+  .iotName h1 {
+    font-size: 3rem;
+  }
+  .chart{
+    width: 91%;
+  }
+  .imageOne {
+    height: 2rem;
+    width: 2rem;
+  }
+  .imageTwo {
+    height: 3.7rem;
+    width: 3.7rem;
+  }
+  .Drak-Light h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container-1 {
+    width: 50%;
+    height: 10vh;
+    display: block;
+    padding-left: 50%;
+  }
+  .container-2 {
+    width: 100%;
+    height: 90vh;
+  }
+  .images {
+    display: none;
+  }
+  #myChart {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container-2-child-1 h1 {
+    font-size: 1.1rem;
+  }
+  .iotName h1 {
+    font-size: 2.5rem;
+  }
+  .button {
+    height: 30px;
+  }
+ 
+}
+
+/* 
+.cursor {
+  width: 33px;
+  height: 33px;
+  border: 2px solid white;
+  background-color: rgba(255, 99, 132, 0.2);
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.cursor::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border: 2px dashed rgba(255, 99, 132, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT-Distance_Meter</title>
+        style 
+            include ../assets/CSS/style.css
+</head>
+ script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js" integrity="sha512-uLlukEfSLB7gWRBvzpDnLGvzNUluF19IDEdUoyGAtaO0MVSBsQ+g3qhLRL3GTVoEzKpc24rVT6X1Pr5fmsShBg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+ script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js" integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A==" crossorigin="anonymous" referrerpolicy="no-referrer" )
+<body>
+    <div class="container">
+        <div class="container-1">
+            <div class="upper"></div>
+            <div class="round">
+                <div class="round_plus"><h1>+</h1></div>
+            </div>
+            <div class="images">
+                <img class="imageOne" src="../images/www_black.png" alt="www_pic">
+                <img class="imageTwo" src="../images/socket_black.png" alt="socket_pic">
+                img(src='../images/www_black.png', alt='login')
+            |</div>
+        </div>
+        <div class="container-2 ">
+            <div class="container-2-child-1">
+                <h1>@KGEC-ROBOTICS SOCIETY</h1>
+                <div class="Drak-Light">
+                    <h3> Dark Mode</h3>
+                    <div class="button" id="button"></div>
+                |</div>
+            </div>
+            <div class="container-2-child-2">
+                <div class="iotName">
+                    <h1>IoT-Dashboard</h1>
+                </div>
+                <div class="chart">
+                    <canvas id="chart" ></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="cursor"></div>
+    </div> -->
+    </div>
+   
+
+</body> 
+     script
+      include ../assets/JS/script.js
+     script
+      include ../assets/JS/cursor.js
+     script
+      include ../assets/JS/theme.js
+</html>
