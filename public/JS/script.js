@@ -1,4 +1,4 @@
-const URL = "/";
+const URL = "http://localhost:3000/";
 
 // Socket.io Code-->
 const socket = io(URL);
