@@ -4,7 +4,7 @@ app = express();
 
 // define the home page route
 router.get('/', (req, res)=> {
-  res.render("webpages/index2")
+  res.render("webpages/index")
 })
 
 router.get('*', (req, res)=> {
