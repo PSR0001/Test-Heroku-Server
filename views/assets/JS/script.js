@@ -1,4 +1,4 @@
-const URL = "http://localhost:5000/";
+const URL = "https://test-code-0001.herokuapp.com/";
 
 // Socket.io Code-->
 const socket = io(URL);
