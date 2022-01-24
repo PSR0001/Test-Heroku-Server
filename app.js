@@ -45,7 +45,11 @@ let message = {
       // socket.on("")
   
   
-      io.emit("Chart-Data",message)
+      // io.emit("Chart-Data",message)
+      socket.on("Chart-Data", (data) => {
+        // console.log(data);
+        socket.broadcast.emit("Chart-Data", data);
+      });
   
     });
   
