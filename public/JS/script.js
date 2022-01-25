@@ -59,7 +59,7 @@ const socket = io(URL);
 // pushing the incoming Value
   function pushValueChart(data){
       // console.log(myChart.data.datasets[0].data)
-      if(data.distance <=100){
+      if(data.distance <=500){
       myChart.data.datasets[0].data.push(data.distance)
       }
       // console.log(myChart.data.datasets[0].data)
