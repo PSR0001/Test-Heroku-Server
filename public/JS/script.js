@@ -64,7 +64,7 @@ const socket = io(URL);
 
       myChart.update();
   }
-
+  
 
 
   const button = document.getElementById('button')

@@ -24,12 +24,7 @@ server.listen(port, () => {
 })
 
 // testing 
-let message = {
-    "distance": 12,
-    "time": 1
-  }
-  
-  
+ 
   
   // Socket listening 
   try {
