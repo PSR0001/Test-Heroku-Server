@@ -38,11 +38,15 @@ server.listen(port, () => {
       });
       // console.log(socket);
       // socket.on("")
-  
+      
+      // let message = {
+      //   "distance":6
+      // }
   
       // io.emit("Chart-Data",message)
       socket.on("Chart-Data", (data) => {
         // console.log(data);
+        
         socket.broadcast.emit("Chart-Data", data);
       });
   

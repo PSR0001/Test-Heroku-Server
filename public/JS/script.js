@@ -30,10 +30,10 @@ const socket = io(URL);
     const myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['RS'],
         datasets: [{  //index[0]
           label: 'Distance',
-          data: [10, 19, 3, 5, 2, 3],
+          data: [10],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
           ],
@@ -54,13 +54,18 @@ const socket = io(URL);
       }
     });
     
+    let time=0;
 
 // pushing the incoming Value
   function pushValueChart(data){
       // console.log(myChart.data.datasets[0].data)
+      if(data.distance <=100){
       myChart.data.datasets[0].data.push(data.distance)
+      }
       // console.log(myChart.data.datasets[0].data)
-      myChart.data.labels.push(data.time)
+      time+=2
+      myChart.data.labels.push(time)
+      
 
       myChart.update();
   }
