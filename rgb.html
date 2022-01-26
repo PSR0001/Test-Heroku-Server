@@ -343,12 +343,24 @@ let colorPicker = new iro.ColorPicker("#color-picker", {
 let hex = colorPicker.color.hexString;
 
 
-colorPicker.on('color:change', function(color) {
+// colorPicker.on('color:change', function(color) {
+//     hex=color.hexString;
+//     colorInd.style.backgroundColor = hex;
+//     // console.log('i am inside hex '+hex);
+//     socket.emit("RGB-Data",hex)
+// });
+
+colorPicker.on('input:end', function(color) {
     hex=color.hexString;
     colorInd.style.backgroundColor = hex;
     // console.log('i am inside hex '+hex);
     socket.emit("RGB-Data",hex)
 });
+
+// colorPicker.on('input:end', function(color) {
+//   console.log(color.hexString)
+//   console.log('input:end');
+// })
 
 // for dark mode
 const button = document.getElementById('button')
