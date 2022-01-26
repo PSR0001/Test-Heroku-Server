@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path');
 const app = express()
 const http = require('http');
 const { instrument } = require("@socket.io/admin-ui");
@@ -13,10 +14,11 @@ const io = new Server(server, {
 
 const port = process.env.PORT || 3000
 
-app.use(express.static('public'))
+// app.use(express.static('public'))
+app.use('/', express.static('public'))
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/rgb', (req, res) => {
+  res.sendFile(path.join(__dirname+'/rgb.html'));
 })
 
 server.listen(port, () => {
@@ -36,18 +38,17 @@ server.listen(port, () => {
       socket.on("disconnect", () => {
         console.log(`User with id: ${socket.id} disconnected`);
       });
-      // console.log(socket);
-      // socket.on("")
-      
-      // let message = {
-      //   "distance":6
-      // }
+    
   
       // io.emit("Chart-Data",message)
       socket.on("Chart-Data", (data) => {
         // console.log(data);
         
         socket.broadcast.emit("Chart-Data", data);
+      });
+      socket.on("RGB-Data", (data) => {
+        // console.log(data);
+        socket.broadcast.emit("RGB-Data", data);
       });
   
     });
