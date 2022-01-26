@@ -353,7 +353,7 @@ let hex = colorPicker.color.hexString;
 colorPicker.on('input:end', function(color) {
     hex=color.hexString;
     colorInd.style.backgroundColor = hex;
-    // console.log('i am inside hex '+hex);
+    // console.log('i am inside hex '+hex);   
     socket.emit("RGB-Data",hex)
 });
 
