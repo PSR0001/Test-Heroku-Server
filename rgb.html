@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IoT-Distance_Meter</title>
+    <title>IoT-RGB-Socket</title>
     <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
    <style>
 
@@ -322,6 +322,19 @@ const socket = io(URL);
  socket.on("disconnect", () => {
     console.log('Socket Disconnected ... ');
 });
+
+ socket.on("RGB-Data", (data) => {
+    // console.log(data);
+
+    colorInd.style.backgroundColor = data;
+    colorPicker.color.set(data)
+
+});
+
+
+
+
+
 
 
 let w = (window.innerWidth > 0) ? window.innerWidth : screen.width;
