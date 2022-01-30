@@ -1,4 +1,4 @@
-# **IoT-Socket-Server**
+# **Test-heroku-Server**
 This is a demo project based on socket.io and express under KGEC-Robotics-Society.
 
 For IoT code, visit [IoT-Distance-Socket](https://github.com/PSR0001/IoT-Distance-Socket). 
@@ -105,7 +105,9 @@ It should look something like this:
 
 ## **Contribution**
 This is a concept for beginners starting with IoT. Feel free to fork, clone, create issues and/or make PRs. We will be more than happy to receive your contributions.
-## **Contribution**
+
+
+## **Announcement**
 This is just a test server. i deploy it on heroku. plz Click the Other Links below.
 
 Link 1: https://test-code-0001.herokuapp.com/
